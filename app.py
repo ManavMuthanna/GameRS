@@ -29,7 +29,7 @@ def recommend(name):
 st.title("GameRS - Game Recommender System")
 st.text("A video-game recommendation engine for PC games")
 
-selected_game_name = option = st.selectbox("Game Search",label_visibility="hidden", options=(name_list))
+selected_game_name = option = st.selectbox("Type or use the drop-down menu to select a game.", options=(name_list))
 button = st.button("Recommend")
 
 if button:
