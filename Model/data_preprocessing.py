@@ -3,8 +3,8 @@ import os
 import pandas as pd
 from google.cloud import storage
 
-os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="game-rec-364519-eeb1fd6cc930.json"
-bucket_name = 'game-rec-files'
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"]="<project-key>.json"
+bucket_name = '<bucket-name>'
 
 #uploading to bucket
 def upload_to_storage(bucket_name: str, source_file_path: str, destination_blob_path: str):
