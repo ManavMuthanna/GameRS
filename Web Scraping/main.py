@@ -1,5 +1,5 @@
 #running get_links.py
-#from get_links import get_url
+from get_links import get_url
 
 import os
 import pandas as pd
