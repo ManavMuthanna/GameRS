@@ -17,17 +17,16 @@ def upload_to_storage(bucket_name: str, source_file_path: str, destination_blob_
     print(f'The file {source_file_path} is uploaded to GCP bucket path: {destination_blob_path}')
     return None
 
+def upload_links():
+    source_files = ['Links.csv','Pages.csv']
+    destination_blobs = ['Links.csv','Pages.csv']
+    length = len(source_files)
+    for i in range(0,length):
+        source_file = source_files[i]
+        destination_blob = destination_blobs[i]
+        upload_to_storage(bucket_name, source_file, destination_blob)
 
-# def upload_links():
-#     source_files = ['Links.csv','Pages.csv']
-#     destination_blobs = ['Links.csv','Pages.csv']
-#     length = len(source_files)
-#     for i in range(0,length):
-#         source_file = source_files[i]
-#         destination_blob = destination_blobs[i]
-#         upload_to_storage(bucket_name, source_file, destination_blob)
-
-# upload_links()
+upload_links()
 
 #running resources.py
 from resources import main
